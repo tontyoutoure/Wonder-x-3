@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mod id="a0e73472-f684-4367-b45b-9818445569d4" version="2">
+  <Properties>
+    <Name>Wonder x 3</Name>
+    <Description>The mod enhance all wonders by three times, inspired by JFD's Trait BalanceGoldPrime++. All wonders are buffed three times.</Description>
+    <Teaser>Buff all wonders by three times.</Teaser>
+    <Authors>tontyoutoure, Siuwa</Authors>
+    <CompatibleVersions>1.2,2.0</CompatibleVersions>
+  </Properties>
+  <Dependencies>
+    <Mod id="02A8BDDE-67EA-4D38-9540-26E685E3156E" title="DLC: Aztec Civilization Pack" />
+    <Mod id="E2749E9A-8056-45CD-901B-C368C8E83DEB" title="DLC: Persia and Macedon Civilization Pack" />
+    <Mod id="1B28771A-C749-434B-9053-D1380C553DE9" title="Expansion: Rise and Fall" />
+    <Mod id="4873eb62-8ccc-4574-b784-dda455e74e68" title="Expansion: Gathering Storm" />
+  </Dependencies>
+  <FrontEndActions />
+  <InGameActions>
+    <UpdateDatabase id="Gameplay_x3">
+      <Properties>
+        <LoadOrder>100</LoadOrder>
+      </Properties>
+      <File>empty_policy_cards.sql</File>
+      <File>wonder_x_3_ExtraUnits.sql</File>
+      <File>wonder_x_3_GreatWorkSlots.sql</File>
+      <File>wonder_x_3.sql</File>
+      <File>wonder_modifer_x_3.sql</File>
+    </UpdateDatabase>
+    <UpdateText id="GameText_x3">
+      <Properties>
+        <LoadOrder>100</LoadOrder>
+      </Properties>
+      <File>wonder_x_3_zh_Hans_CN.xml</File>
+      <File>wonder_x_3_Text.sql</File>
+      <File>empty_policy_cards_text.sql</File>
+    </UpdateText>
+    <AddGameplayScripts id="Script_x3">
+      <File>wonder_x_3.lua</File>
+    </AddGameplayScripts>
+  </InGameActions>
+  <Files>
+    <File>debug.sql</File>
+    <File>empty_policy_cards.sql</File>
+    <File>empty_policy_cards_text.sql</File>
+    <File>wonder_modifer_x_3.sql</File>
+    <File>wonder_x_3.lua</File>
+    <File>wonder_x_3.sql</File>
+    <File>wonder_x_3_ExtraUnits.sql</File>
+    <File>wonder_x_3_GreatWorkSlots.sql</File>
+    <File>wonder_x_3_Text.sql</File>
+    <File>wonder_x_3_zh_Hans_CN.xml</File>
+  </Files>
+</Mod>
