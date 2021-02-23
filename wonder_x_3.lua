@@ -121,8 +121,8 @@ function TerracottaComplete(WonderX, WonderY, BuildingIndex, PlayerIndex)
 					for i = 1, #PromotionClassList[UnitPromotionClass] do
 						if not UnitInfo:GetExperience():HasPromotion(PromotionClassList[UnitPromotionClass][i]) then
 							UnitInfo:GetExperience():SetPromotion(PromotionClassList[UnitPromotionClass][i])
+							nPromotion = nPromotion+1
 						end
-						nPromotion = nPromotion+1
 						if nPromotion == PromotionCount then
 							break
 						end
