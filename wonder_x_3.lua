@@ -9,7 +9,7 @@
 local GiveCount=18
 
 -- How many promotion units are given after TCW are built
-local PromotionCount = 7
+local PromotionCount = 2
 
 local PromotionRange = 12
 
@@ -17,7 +17,7 @@ local PromotionRange = 12
 local GreatProphetCount = 0
 
 -- How many tech boost great lib give after other people get GS
-local GreatLibraryTechBoostCount = 9
+local GreatLibraryTechBoostCount = 2
 
 local BuildingList = {}
 local BuildingIndices = {}
@@ -117,8 +117,15 @@ function TerracottaComplete(WonderX, WonderY, BuildingIndex, PlayerIndex)
 				local UnitPromotionClass = UnitPromotionClassList[UnitInfo:GetType()]
 				if UnitPromotionClass and UnitPromotionClass <= PromotionRange then
 					UnitInfo:SetDamage(0)
+					local nPromotion = 0
 					for i = 1, #PromotionClassList[UnitPromotionClass] do
-						UnitInfo:GetExperience():SetPromotion(PromotionClassList[UnitPromotionClass][i])
+						if not UnitInfo:GetExperience():HasPromotion(PromotionClassList[UnitPromotionClass][i]) then
+							UnitInfo:GetExperience():SetPromotion(PromotionClassList[UnitPromotionClass][i])
+						end
+						nPromotion = nPromotion+1
+						if nPromotion == PromotionCount then
+							break
+						end
 					end
 				end				
 			elseif UnitNum == 0 then 				
@@ -132,4 +139,4 @@ end
 
 Events.WonderCompleted.Add(TerracottaComplete)
 
-print("wonder x 10 loading complete")	
+print("wonder x 3 loading complete")	
