@@ -538,3 +538,24 @@ SET Value = Value * 3
 WHERE Name = "Amount" AND ModifierId LIKE "BIOSPHERE%";
 
 
+-- ETEMENANKI
+UPDATE Building_YieldChanges
+SET YieldChange = YieldChange * 3
+WHERE BuildingType = "BUILDING_ETEMENANKI";
+
+UPDATE ModifierArguments
+SET Value = Value * 3
+WHERE Name = "Amount" AND ModifierId LIKE "ETEMENANKI%";
+
+-- TORREDEBELEM
+UPDATE Building_YieldChanges
+SET YieldChange = YieldChange * 3
+WHERE BuildingType = "BUILDING_TORRE_DE_BELEM";
+
+UPDATE Building_GreatPersonPoints
+SET PointsPerTurn = PointsPerTurn * 3
+WHERE BuildingType = "BUILDING_TORRE_DE_BELEM";
+
+UPDATE ModifierArguments
+SET Value = Value * 3
+WHERE Name = "Amount" AND ModifierId LIKE "TORREDEBELEM%";

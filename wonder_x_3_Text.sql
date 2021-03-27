@@ -270,3 +270,6 @@ WHERE Language = 'en_US'
 AND Tag="LOC_BUILDING_STATUE_OF_ZEUS_DESCRIPTION";
 
 
+UPDATE LocalizedText SET Text = "International [ICON_TradeRoute] Trade Routes from this city receive +6 [ICON_GOLD] Gold for every Luxury Resource at the destination. When the Torre de Belém is constructed, cities not on your home continent receive three lowest [ICON_PRODUCTION] Production cost buildings they can currently construct.[NEWLINE][NEWLINE]Must be built on a Coast tile that is adjacent to a Harbor district."	WHERE Language = 'en_US' AND Tag="LOC_BUILDING_TORRE_DE_BELEM_DESCRIPTION";
+UPDATE LocalizedText SET Text = "+6 [ICON_SCIENCE] Science and +3 [ICON_PRODUCTION] Production to all Marsh tiles in your empire. +3 [ICON_SCIENCE] Science and +3 [ICON_PRODUCTION] Production on all Floodplains tiles for this city.[NEWLINE][NEWLINE]Must be built on Floodplains or Marsh."	WHERE Language = 'en_US' AND Tag="LOC_BUILDING_ETEMENANKI_DESCRIPTION";
+
