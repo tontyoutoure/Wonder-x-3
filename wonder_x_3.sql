@@ -52,6 +52,10 @@ UPDATE ModifierArguments
 SET Value = Value * 3
 WHERE Name = "Amount" AND ModifierId LIKE "GREATLIGHTHOUSE_ADJUST%";
 
+UPDATE ModifierArguments
+SET Value = Value * 3
+WHERE Name = "Amount" AND ModifierId = "GREAT_LIGHTHOUSE_SEA_MOVEMENT";
+
 -- Colossus
 
 UPDATE Building_YieldChanges
